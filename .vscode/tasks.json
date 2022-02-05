@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C/C++: g++.exe build active file",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-g",
+    		    "-I.\\include",
+		        "-L.\\lib",				
+		        ".\\src\\*.cpp",				
+		        ".\\src\\glad.c",
+                "-lglfw3dll",
+                "-lopengl32",
+                "-lglew32",
+                "-o.\\bin\\application.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        }
+    ]
+}
